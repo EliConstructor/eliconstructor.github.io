@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    size: 64px;
+}
+
+span::before {
+    content: "";
+    animation: animate infinite 60s;
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Banana";
+        opacity: 0;
+    }
+
+    10% {
+        content: "Banana";
+        opacity: 100;
+    }
+
+    20% {
+        content: "Banana";
+        opacity: 0;
+    }
+
+    40% {
+        content: "Rotate";
+        opacity: 0;
+    }
+
+    50% {
+        content: "Rotate";
+        opacity: 100;
+    }
+    
+    60% {
+        content: "Rotate";
+        opacity: 0;
+    }
+
+    80% {
+        content: "Mmm";
+        opacity: 0;
+    }
+
+    90% {
+        content: "Mmm";
+        opacity: 100;
+    }
+
+    100% {
+        content: "Mmm";
+        opacity: 0;
+    }
+}
