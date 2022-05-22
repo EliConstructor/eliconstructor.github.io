@@ -1,3 +1,0 @@
-recipes.removeByMod("grapplemod");
-
-recipes.addShapeless("CTHook", <grapplemod:grapplinghook>, [<minecraft:iron_pickaxe>, <minecraft:lead>]);
