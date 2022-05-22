@@ -1,0 +1,6 @@
+recipes.remove(<futuremc:barrel>, false);
+
+recipes.addShaped("CTBarrel", <futuremc:barrel>,
+ [[<ore:plankWood>,<ore:slabWood>,<ore:plankWood>],
+  [<ore:plankWood>,<ore:ingotIron>,<ore:plankWood>],
+  [<ore:plankWood>,<ore:slabWood>,<ore:plankWood>]]);

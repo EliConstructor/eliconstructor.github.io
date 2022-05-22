@@ -1,0 +1,14 @@
+# Configuration file
+
+data-logging {
+    I:collection-interval=5
+    I:write-interval=10
+}
+
+
+points {
+    I:enemy-kill=1
+    I:flag-capture=10
+}
+
+

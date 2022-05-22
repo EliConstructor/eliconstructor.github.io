@@ -1,0 +1,6 @@
+recipes.removeShapeless(<minecraft:planks>, [<futuremc:stripped_oak_log>], false);
+recipes.removeShapeless(<minecraft:planks:1>, [<futuremc:stripped_spruce_log>], false);
+recipes.removeShapeless(<minecraft:planks:2>, [<futuremc:stripped_birch_log>], false);
+recipes.removeShapeless(<minecraft:planks:3>, [<futuremc:stripped_jungle_log>], false);
+recipes.removeShapeless(<minecraft:planks:4>, [<futuremc:stripped_acacia_log>], false);
+recipes.removeShapeless(<minecraft:planks:5>, [<futuremc:stripped_dark_oak_log>], false);

@@ -1,0 +1,20 @@
+#loader contenttweaker
+
+import mods.contenttweaker.VanillaFactory;
+import mods.contenttweaker.Item;
+
+var unfired_mold = VanillaFactory.createItem("unfired_mold");
+unfired_mold.maxStackSize = 8;
+unfired_mold.register();
+
+var ingot_mold = VanillaFactory.createItem("ingot_mold");
+ingot_mold.maxStackSize = 8;
+ingot_mold.register();
+
+var filled_mold_copper = VanillaFactory.createItem("filled_mold_copper");
+filled_mold_copper.maxStackSize = 1;
+filled_mold_copper.register();
+
+var filled_mold_tin = VanillaFactory.createItem("filled_mold_tin");
+filled_mold_tin.maxStackSize = 1;
+filled_mold_tin.register();

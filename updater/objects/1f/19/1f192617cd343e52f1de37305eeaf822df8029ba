@@ -1,0 +1,9 @@
+import mods.pyrotech.Bloomery;
+
+recipes.remove(<minecraft:crafting_table>, false);
+
+recipes.addShaped("CTWorkbench", <minecraft:crafting_table>,
+ [[<ore:plankWood>,<ore:ingotIron>,<ore:plankWood>],
+  [<ore:plankWood>,<ore:plankWood>,<ore:plankWood>],
+  [<ore:plankWood>,<ore:plankWood>,<ore:plankWood>]]);
+

@@ -1,0 +1,5 @@
+recipes.remove(<culinaryconstruct:sandwich_station>, false);
+
+recipes.addShaped("CTSandwichStation", <culinaryconstruct:sandwich_station>,
+ [[<ore:slabWood>],
+  [<pyrotech:worktable>]]);

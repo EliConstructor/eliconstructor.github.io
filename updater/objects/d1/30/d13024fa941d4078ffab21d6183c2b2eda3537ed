@@ -1,0 +1,14 @@
+# Configuration file
+
+general {
+
+    worldgen {
+        S:biomes <
+            
+         >
+        D:chance=0.0
+    }
+
+}
+
+
