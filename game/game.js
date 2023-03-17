@@ -1,10 +1,10 @@
 const defaultGame = {
     bananas: 0,
     farms: 0,
-    workers: 0
+    workers: 0,
+    pickers: 0
 }
-var game
-
+var game = {}
 
 function tick() {
     updateBananaCounter()
@@ -17,7 +17,7 @@ function updateBananaCounter(){
 }
 
 function bananaClick(){
-    game.bananas += 1
+    game.bananas += 1 + game.pickers
     updateBananaCounter()
 }
 
@@ -33,19 +33,19 @@ function getProduction(){
 function updatePrices(){
     document.getElementById("workerprice").innerHTML = getWorkerPrice()
     document.getElementById("farmprice").innerHTML = getFarmPrice()
+    document.getElementById("pickerprice").innerHTML = getPickerPrice()
 }
 
 function updateCounters(){
     document.getElementById("farmcounter").innerHTML = game.farms
     document.getElementById("workercounter").innerHTML = game.workers
+    document.getElementById("pickercounter").innerHTML = game.pickers
 }
 
 function loadGame(){
+    game = defaultGame
     if (localStorage.getItem("game") != null){
         game = JSON.parse(localStorage.getItem("game"))
-    }
-    else {
-        game = deafultGame
     }
     updatePrices()
     updateCounters()

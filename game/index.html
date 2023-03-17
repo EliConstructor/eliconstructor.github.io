@@ -22,14 +22,21 @@
         <p>You are producing <a id="bananaproduction">0</a> bananas per second</p>
         <button onclick="bananaClick()"><img src="banana.png" style="width: 50px;">Pick Banana</button>
         <hr>
+
+        <p>You have <a id="pickercounter">0</a> banana pickers</p>
+        <button onclick="buyPicker()"><img src="picker.png" style="width: 50px;">Buy Banana Picker (<a id="pickerprice">50</a> bananas) (Adds one extra banana per click)</button>
+        <hr>
+
         <p>You have <a id="farmcounter">0</a> banana farms</p>
         <button onclick="buyFarm()"><img src="farm.png" style="width: 50px;">Buy Banana Farm (<a id="farmprice">20</a> bananas) (Produces 1 banana per second)</button>
         <hr>
+
         <p>You have <a id="workercounter">0</a> workers</p>
-        <button onclick="buyWorker()"><img src="worker.png" style="width: 50px;">Buy Responsibly Hired Worker :) (<a id="workerprice">1000</a> bananas) (Increases banana production by 1.7%)</button>
+        <button onclick="buyWorker()"><img src="worker.png" style="height: 50px;">Buy Responsibly Hired Worker :) (<a id="workerprice">1000</a> bananas) (Increases banana production by 1.7%)</button>
 
         <script src="game.js" async defer></script>
         <script src="farms.js" async defer></script>
         <script src="workers.js" async defer></script>
+        <script src="pickers.js" async defer></script>
     </body>
 </html>
