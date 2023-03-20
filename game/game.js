@@ -1,5 +1,6 @@
 const defaultGame = {
     bananas: 0,
+    bananasCopy: 0,
     farms: 0,
     workers: 0,
     pickers: 0
@@ -7,8 +8,15 @@ const defaultGame = {
 var game = {}
 
 function tick() {
+    if (game.bananas > game.bananasCopy){
+        alert("pyry älä tee tota")
+        console.log("pyry älä tee tota")
+        game.bananas = 0
+    }
+
     updateBananaCounter()
     game.bananas += getProduction()
+    game.bananasCopy = game.bananas
 }
 
 function updateBananaCounter(){
@@ -18,6 +26,7 @@ function updateBananaCounter(){
 
 function bananaClick(){
     game.bananas += 1 + game.pickers
+    game.bananasCopy = game.bananas
     updateBananaCounter()
 }
 
@@ -45,7 +54,7 @@ function updateCounters(){
 function loadGame(){
     game = defaultGame
     if (localStorage.getItem("game") != null){
-        game = JSON.parse(localStorage.getItem("game"))
+        Object.assign(game, JSON.parse(localStorage.getItem("game")))
     }
     updatePrices()
     updateCounters()
