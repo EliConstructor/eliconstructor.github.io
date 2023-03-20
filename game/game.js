@@ -6,6 +6,7 @@ const defaultGame = {
     pickers: 0
 }
 var game = {}
+var lastClick = 0;
 
 function tick() {
     if (game.bananas > game.bananasCopy){
@@ -25,9 +26,13 @@ function updateBananaCounter(){
 }
 
 function bananaClick(){
-    game.bananas += 1 + game.pickers
-    game.bananasCopy = game.bananas
-    updateBananaCounter()
+    // Antiautoclick
+    if (Date.now() - lastClick > 33){
+        game.bananas += 1 + game.pickers
+        game.bananasCopy = game.bananas
+        updateBananaCounter()
+    }
+    lastClick = Date.now()
 }
 
 function getProduction(){
