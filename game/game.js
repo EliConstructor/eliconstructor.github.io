@@ -3,7 +3,8 @@ const defaultGame = {
     bananasCopy: 0,
     farms: 0,
     workers: 0,
-    pickers: 0
+    pickers: 0,
+    printers: 0
 }
 var game = {}
 var lastClick = 0;
@@ -38,6 +39,7 @@ function bananaClick(){
 function getProduction(){
     var production = 0
     production += game.farms * 1
+    production += game.printers * 10
     for (let i = 0; i < game.workers; i++) {
         production *= 1.05
     }
@@ -48,12 +50,14 @@ function updatePrices(){
     document.getElementById("workerprice").innerHTML = getWorkerPrice()
     document.getElementById("farmprice").innerHTML = getFarmPrice()
     document.getElementById("pickerprice").innerHTML = getPickerPrice()
+    document.getElementById("printerprice").innerHTML = getPrinterPrice()
 }
 
 function updateCounters(){
     document.getElementById("farmcounter").innerHTML = game.farms
     document.getElementById("workercounter").innerHTML = game.workers
     document.getElementById("pickercounter").innerHTML = game.pickers
+    document.getElementById("printercounter").innerHTML = game.printers
 }
 
 function loadGame(){
