@@ -10,7 +10,7 @@
         <title>BANANA GAME</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body onload="loadGame()">
         <!--[if lt IE 7]>
@@ -23,16 +23,23 @@
         <button onclick="bananaClick()"><img src="banana.png" style="width: 50px;">Pick Banana</button>
         <hr>
 
-        <p>You have <a id="pickercounter">0</a> banana pickers</p>
-        <button onclick="buyPicker()"><img src="picker.png" style="width: 50px;">Buy Banana Picker (<a id="pickerprice">50</a> bananas) (Adds one extra banana per click)</button>
-        <hr>
+        <div class="producers box">
+            <h2>Producers</h2>
+            <p>You have <a id="pickercounter">0</a> banana pickers</p>
+            <button onclick="buyPicker()"><img src="picker.png" style="width: 50px;">Buy Banana Picker (<a id="pickerprice">50</a> bananas) (Adds one extra banana per click)</button>
+            <hr>
+    
+            <p>You have <a id="farmcounter">0</a> banana farms</p>
+            <button onclick="buyFarm()"><img src="farm.png" style="width: 50px;">Buy Banana Farm (<a id="farmprice">20</a> bananas) (Produces 1 banana per second)</button>
+            <hr>    
+        </div>
 
-        <p>You have <a id="farmcounter">0</a> banana farms</p>
-        <button onclick="buyFarm()"><img src="farm.png" style="width: 50px;">Buy Banana Farm (<a id="farmprice">20</a> bananas) (Produces 1 banana per second)</button>
-        <hr>
+        <div class="upgrades box">
+            <h2>Upgrades</h2>
+            <p>You have <a id="workercounter">0</a> workers</p>
+            <button onclick="buyWorker()"><img src="worker.png" style="height: 50px;">Buy Responsibly Hired Worker :) (<a id="workerprice">1000</a> bananas) (Increases banana production by 5%)</button>    
+        </div>
 
-        <p>You have <a id="workercounter">0</a> workers</p>
-        <button onclick="buyWorker()"><img src="worker.png" style="height: 50px;">Buy Responsibly Hired Worker :) (<a id="workerprice">1000</a> bananas) (Increases banana production by 1.7%)</button>
 
         <script src="game.js" async defer></script>
         <script src="farms.js" async defer></script>

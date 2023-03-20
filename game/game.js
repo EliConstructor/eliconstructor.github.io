@@ -39,7 +39,7 @@ function getProduction(){
     var production = 0
     production += game.farms * 1
     for (let i = 0; i < game.workers; i++) {
-        production *= 1.017
+        production *= 1.05
     }
     return production
 }
