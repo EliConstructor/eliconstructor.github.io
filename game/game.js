@@ -4,17 +4,19 @@ const defaultGame = {
     farms: 0,
     workers: 0,
     pickers: 0,
-    printers: 0
+    printers: 0,
+    goblins: 0,
+    finders: 0
 }
 var game = {}
 var lastClick = 0;
 
 function tick() {
-    if (game.bananas > game.bananasCopy){
-        alert("pyry älä tee tota")
+    /*if (game.bananas > game.bananasCopy){
+        //alert("pyry älä tee tota")
         console.log("pyry älä tee tota")
         game.bananas = 0
-    }
+    }*/
 
     updateBananaCounter()
     game.bananas += getProduction()
@@ -40,6 +42,8 @@ function getProduction(){
     var production = 0
     production += game.farms * 1
     production += game.printers * 10
+    production += game.goblins * 20
+    production += game.finders * 50
     for (let i = 0; i < game.workers; i++) {
         production *= 1.05
     }
@@ -51,6 +55,8 @@ function updatePrices(){
     document.getElementById("farmprice").innerHTML = getFarmPrice()
     document.getElementById("pickerprice").innerHTML = getPickerPrice()
     document.getElementById("printerprice").innerHTML = getPrinterPrice()
+    document.getElementById("goblinprice").innerHTML = getGoblinPrice()
+    document.getElementById("finderprice").innerHTML = getFinderPrice()
 }
 
 function updateCounters(){
@@ -58,6 +64,8 @@ function updateCounters(){
     document.getElementById("workercounter").innerHTML = game.workers
     document.getElementById("pickercounter").innerHTML = game.pickers
     document.getElementById("printercounter").innerHTML = game.printers
+    document.getElementById("goblincounter").innerHTML = game.goblins
+    document.getElementById("findercounter").innerHTML = game.finders
 }
 
 function loadGame(){
