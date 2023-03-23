@@ -11,7 +11,7 @@ function buyFarm(){
 function getFarmPrice(){
     var price = 20
     for (let i = 0; i < game.farms; i++) {
-        price *= 1.5
+        price *= 1.1
     }
     return Math.round(price)
 }

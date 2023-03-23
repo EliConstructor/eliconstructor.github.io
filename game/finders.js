@@ -9,9 +9,9 @@ function buyFinder() {
 }
 
 function getFinderPrice() {
-    var price = 30000
+    var price = 3000
     for (let i = 0; i < game.finders; i++) {
-        price *= 1.5
+        price *= 1.1
     }
     return Math.round(price)
 }

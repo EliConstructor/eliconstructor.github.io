@@ -9,9 +9,9 @@ function buyPrinter() {
 }
 
 function getPrinterPrice() {
-    var price = 1000
+    var price = 250
     for (let i = 0; i < game.printers; i++) {
-        price *= 1.5
+        price *= 1.1
     }
     return Math.round(price)
 }

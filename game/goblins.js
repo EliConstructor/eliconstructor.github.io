@@ -9,9 +9,9 @@ function buyGoblin() {
 }
 
 function getGoblinPrice() {
-    var price = 10000
+    var price = 1000
     for (let i = 0; i < game.goblins; i++) {
-        price *= 1.5
+        price *= 1.1
     }
     return Math.round(price)
 }
